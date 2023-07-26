@@ -79,13 +79,13 @@ public class SchemaManager {
                     continue;
                 tableMetas.put(tableMeta.tbname, tableMeta);
             }
-   LOG.info(tbname);         
+   LOG.info(tableMeta.tbname);         
             for (String tbname : tables) {
                 if (!tableMetas.containsKey(tbname)) {
                     throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, "table metadata of " + tbname + " is empty!");
                 }
             }
-            LOG.info(tbname); 
+            LOG.info(tableMeta.tbname); 
         } catch (SQLException e) {
             throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, e.getMessage());
         }
