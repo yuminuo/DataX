@@ -79,7 +79,6 @@ public class SchemaManager {
                     continue;
                 tableMetas.put(tableMeta.tbname, tableMeta);
             }
-LOG.info(Arrays.toString(tables));
    LOG.info(tbname);         
             for (String tbname : tables) {
                 if (!tableMetas.containsKey(tbname)) {
