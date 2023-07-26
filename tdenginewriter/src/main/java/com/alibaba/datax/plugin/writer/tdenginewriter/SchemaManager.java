@@ -85,7 +85,7 @@ public class SchemaManager {
                     throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, "table metadata of " + tbname + " is empty!");
                 }
             }
-            LOG.info(124); 
+            LOG.info(tbname); 
         } catch (SQLException e) {
             throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, e.getMessage());
         }
