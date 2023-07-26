@@ -86,6 +86,7 @@ LOG.info(Arrays.toString(tables));
                     throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, "table metadata of " + tbname + " is empty!");
                 }
             }
+            LOG.info(124); 
         } catch (SQLException e) {
             throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, e.getMessage());
         }
