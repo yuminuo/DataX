@@ -79,7 +79,8 @@ public class SchemaManager {
                     continue;
                 tableMetas.put(tableMeta.tbname, tableMeta);
             }
-
+LOG.info(tables);
+   LOG.info(tbname);         
             for (String tbname : tables) {
                 if (!tableMetas.containsKey(tbname)) {
                     throw DataXException.asDataXException(TDengineWriterErrorCode.RUNTIME_EXCEPTION, "table metadata of " + tbname + " is empty!");
